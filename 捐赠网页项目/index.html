@@ -69,8 +69,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>NDP（New Donate Platform）</h3>
-                    <p>由于现在人们对于捐赠物品、财物的态度，许多人担心这些捐赠品到不了真正需要的人手中，而选择放弃捐赠。所以想设计一款捐赠者与受赠者之间可以直接交流的平台，确保真实性。</p>
-                    <p>我们致力于搭建一个透明、高效的捐赠桥梁，让爱心能够真正传递到需要帮助的人手中。通过直接交流机制，确保每一份捐赠都能被妥善使用，同时增强捐赠者的参与感和信任感。</p>
+                    <p>很多人想伸出援手，却担心爱心无法真正抵达需要的人手中。</p>
+                    <p>NDP 搭建了捐赠者与受赠者直接沟通的桥梁，让每一份善意都透明可追溯，让温暖精准传递，也让你的善意更有力量。</p>
                 </div>
                 <div class="about-features">
                     <div class="feature">
@@ -152,16 +152,16 @@
                     <p>周一至周五 9:00-18:00</p>
                 </div>
             </div>
-            <form class="contact-form">
-                <h3>发送消息</h3>
+            <form class="contact-form" onsubmit="event.preventDefault(); submitFeedback(this)">
+                <h3>问题反馈</h3>
                 <div class="form-group">
-                    <input type="text" placeholder="您的姓名">
-                    <input type="email" placeholder="您的邮箱">
+                    <input type="text" placeholder="您的姓名" required>
+                    <input type="email" placeholder="您的邮箱" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="您的留言"></textarea>
+                    <textarea placeholder="请描述您在使用网站时遇到的问题或建议..." required></textarea>
                 </div>
-                <button type="submit" class="btn-primary">发送</button>
+                <button type="submit" class="btn-primary">提交反馈</button>
             </form>
         </div>
     </section>
