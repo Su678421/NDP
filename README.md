@@ -173,44 +173,8 @@ NDP（New Donation Platform）是一个直接连接捐赠者与受赠者的公�
 
 ---
 
-## 快速开始
 
-### 本地运行步骤
-
-1. **克隆仓库**
-   ```bash
-   git clone https://github.com/your-username/ndp-donation-platform.git
-   cd ndp-donation-platform
-   ```
-
-2. **安装依赖**
-   ```bash
-   cd ndp-backend
-   npm install
-   ```
-
-3. **配置环境变量**
-   在 `ndp-backend` 目录创建 `.env` 文件：
-   ```
-   MONGO_URI=mongodb://localhost:27017/ndp-backend
-   JWT_SECRET=your-secret-key-here-change-in-production
-   PORT=3000
-   ```
-
-4. **启动 MongoDB**
-   - 启动 MongoDB 服务
-   - 使用 MongoDB Compass 连接本地数据库
-
-5. **启动服务器**
-   ```bash
-   npm start
-   ```
-   或者
-   ```bash
-   node server.js
-   ```
-
-6. **访问网站**
+**访问网站**
    打开浏览器访问：`http://localhost:3000`
 
 ### 管理员账号
@@ -245,32 +209,6 @@ ndp-backend/
 └── README.md
 ```
 
----
-
-## 部署说明
-
-### 本地部署（推荐用于测试）
-
-1. 确保 Node.js 和 MongoDB 已安装
-2. 按照上面的"快速开始"步骤操作
-3. 使用 ngrok 等工具进行内网穿透，让其他人访问
-
-### 云服务器部署（推荐用于正式使用）
-
-1. 购买云服务器（阿里云、腾讯云等）
-2. 安装 Node.js 和 MongoDB
-3. 上传代码到服务器
-4. 配置环境变量
-5. 使用 PM2 等工具管理进程
-6. 配置防火墙规则开放端口
-
----
-
-## 开源协议
-
-MIT License - 详见 [LICENSE](LICENSE) 文件
-
----
 
 ## 贡献
 
