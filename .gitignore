@@ -1,8 +1,1 @@
-# 敏感文件
-.env
-routes/auth.js
-start.bat
-启动全部.bat
 
-# 截图
-捐赠网页项目/screenshots/
