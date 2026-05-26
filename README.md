@@ -128,7 +128,7 @@
 
 
 
-**访问网站**
+访问网站
    因为笨蛋作者一直没学会怎么部署一个24小时可访问的网站，所以只有我的电脑打开的时候你们才能访问...
    而且好像每次网址都是变化的/(ㄒoㄒ)/~~就不写了
 
@@ -149,27 +149,36 @@
 2. 下载 LTS 版本（推荐版本 18.x 或更高）
 3. 双击安装包，按照提示完成安装
 4. **验证安装**：打开命令提示符（CMD），输入：
-  
+   ```bash
    node -v
- 
+   ```
    应该显示类似 `v18.x.x` 的版本号
 
 #### 1.2 安装 MongoDB
 
-**使用 MongoDB Compass（推荐新手）**
+**方法一：使用 MongoDB Compass（推荐新手）**
 
 1. 访问：<https://www.mongodb.com/try/download/compass>
 2. 下载并安装 MongoDB Compass（包含 MongoDB 服务器）
 3. 安装完成后，MongoDB 会自动启动
 4. 打开 MongoDB Compass，它会自动连接到本地数据库
 
+**方法二：单独安装 MongoDB 服务器**
+
+1. 访问：<https://www.mongodb.com/try/download/community>
+2. 选择版本：Community Server
+3. 选择操作系统：Windows
+4. 选择包类型：msi
+5. 下载并安装
+6. 安装过程中，勾选 "Install MongoDB as a Service"
+7. 安装完成后，MongoDB 会作为服务自动运行
 
 **验证 MongoDB 安装**：
 打开命令提示符（CMD），输入：
 
-
+```bash
 mongod --version
-
+```
 
 应该显示 MongoDB 版本信息
 
@@ -187,7 +196,8 @@ mongod --version
    - Windows 方法：在文件资源管理器中，右键 → 复制 → 粘贴，重命名为 `.env`
 3. 用记事本或 VS Code 打开 `.env` 文件
 4. 修改内容如下：
-   
+
+```env
 # MongoDB 连接字符串
 # 本地连接（默认）：
 MONGO_URI=mongodb://localhost:27017/ndp-backend
@@ -209,13 +219,14 @@ JWT_SECRET=mySecretKey123456
 
 1. 打开命令提示符（CMD）
 2. 进入项目目录：
-   （先进入项目所在的磁盘）
-   cd 你的项目路径\NDP
-  
+   ```bash
+   （先进入项目所在磁盘）
+   cd 你的项目路径\ndp-backend
+   ```
 3. 安装依赖：
-  
+   ```bash
    npm install
-   
+   ```
    这会安装项目所需的所有依赖包，需要等待几分钟
 
 ### 第四步：启动数据库
@@ -229,7 +240,7 @@ JWT_SECRET=mySecretKey123456
 2. 点击 "Connect"
 3. **创建一个数据库**：
    - 点击左侧 "Create Database"
-   - Database Name：`NDP`
+   - Database Name：`ndp-backend`
    - Collection Name：`users`（默认集合）
    - 点击 "Create Database"
 
@@ -237,21 +248,21 @@ JWT_SECRET=mySecretKey123456
 
 1. 打开命令提示符（CMD）
 2. 启动 MongoDB 服务：
-   
+   ```bash
    net start MongoDB
-   
+   ```
 
 ### 第五步：启动服务器
 
 1. 在命令提示符中，确保在项目目录下
 2. 启动服务器：
-   
+   ```bash
    npm start
-   
+   ```
    或
-   
+   ```bash
    node server.js
-   
+   ```
 3. 如果看到以下信息，说明启动成功：
    ```
    数据库连接成功
@@ -260,11 +271,11 @@ JWT_SECRET=mySecretKey123456
 
 ### 第六步：访问网站
 
-1. 打开浏览器（推荐google浏览器）
+1. 打开浏览器
 2. 在地址栏输入：
-  
+   ```
    http://localhost:3000
-
+   ```
 3. 应该能看到网站首页
 
 ## 贡献
